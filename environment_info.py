@@ -6,5 +6,7 @@ print(f'Environment: {environment}\nAWS Region: {aws_region}\nApplication: {appl
 
 if environment == "dev":
     print('Development environment detected')
+elif environment == "test":
+    print('Test environment detected')
 else:
     print ('Production environment detected')
