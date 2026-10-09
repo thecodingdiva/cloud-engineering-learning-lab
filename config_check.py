@@ -6,7 +6,10 @@ config = {
 }
 
 def summarize_config(config_file):
-    for element in config:
+    for element in config_file:
         print(element + f' : {(config_file[element])}')
+
+    if config_file["instance_count"] > 5:
+        print('Warning: High instance count')
 
 summarize_config(config)

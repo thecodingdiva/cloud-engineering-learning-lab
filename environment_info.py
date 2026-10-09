@@ -1,4 +1,4 @@
-environment = "staging"
+environment = "dev"
 aws_region = "us-east-1"
 application = "learning-lab"
 
@@ -13,4 +13,7 @@ elif environment == "test":
 else:
     print ('Production environment detected')
 
-print(f'Environment: {environment}\nAWS Region: {aws_region}\nApplication: {application}')
+if environment in valid:
+    print(f'Environment: {environment}\nAWS Region: {aws_region}\nApplication: {application}')  
+else:
+    print(f'Environment: {environment} is invalid. Please choose from {valid}')
