@@ -5,7 +5,7 @@ application = "learning-lab"
 valid = ["dev", "test", "prod"]
 
 if environment not in valid:
-    print('Error: Invalid environment specified')
+    raise ValueError("Unsupported deployment environment")
 elif environment == "dev":
     print('Development environment detected')
 elif environment == "test":
