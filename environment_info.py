@@ -21,12 +21,9 @@ valid = ["dev", "test", "prod"]
 #     print(f'Environment: {environment} is invalid. Please choose from {valid}')
 
 def validate_environment(env):
-    # env = env.lower().strip()
     if env not in valid:
         raise ValueError(f"Unsupported deployment environment: {env}")
     else:
-        # print(f'{env} environment detected.')
-        # print(f'Environment: {env}\nAWS Region: {config_check.config["region"]}')
         return env
     
 def main():
