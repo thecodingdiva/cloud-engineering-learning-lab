@@ -12,4 +12,7 @@ def summarize_config(config_file):
     if config_file["instance_count"] > 5:
         print('Warning: High instance count')
 
-summarize_config(config)
+    return config_file
+
+if __name__ == "__main__":
+    summarize_config(config)
